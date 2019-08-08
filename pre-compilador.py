@@ -12,12 +12,10 @@ fleg = False
 
 print(len(texto))
 for i in range(len(texto)) :
-    if re.findall("//", texto[i]) == []:
+    if re.findall("//", texto[i]) != []:
+        saida.append(texto[i].split('//')[0])
+    else:
         saida.append(texto[i])
-
-
-
-
 
 for i in range(len(saida)) :
     if re.findall('\/\*', saida[i]) != []:
